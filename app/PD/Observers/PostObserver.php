@@ -46,7 +46,7 @@ class PostObserver {
 				->get();
 			foreach ($registrationIds as $registrationId)
 			{
-				$this->pushNotification->send_notification($registrationId, $publishedPost->title);
+				$this->pushNotification->send_notification($registrationId, $publishedPost);
 				Log::info("PostNotification was successfully sent for " . $registrationId->pushRegId);
 			}
 		}

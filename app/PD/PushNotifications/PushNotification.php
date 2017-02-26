@@ -10,7 +10,7 @@ namespace PD\PushNotifications;
  */
 use Illuminate\Support\Facades\Log;
 
-define("GOOGLE_API_KEY",'AIzaSyBCpnM7wH43l452sH61ZfTegqXZRpZCATo');
+define("GOOGLE_API_KEY",'AAAAlAyeuvs:APA91bF4XXfXHoI-DIJYPh9W2XGx7gykSzLiNib8zifZL5MAarls6c-68alYAl0ZRjkgq63dieC7GqLWkrZ71Q5Lhy9ZKjhr1fwH1QNB39A2a_OqVm49sO4Ba_7yFgVXekbYLo0ASUGss1aVkHuTQxbdFiM8XAtmJQ');
 
 class PushNotification {
 
@@ -23,8 +23,7 @@ class PushNotification {
 
         $fields = array(
             "notification" =>array(
-                    "body" => "Portal Up Notification Done",
-                    "title" => $message
+                    "post" => $message
                 ),
             "to" => $registration_ids->pushRegId
 
