@@ -23,7 +23,8 @@ class PushNotification {
 
         $fields = array(
             "notification" =>array(
-                    "post" => $message
+                    "body" => $message->body,
+                    "title" => $message->title
                 ),
             "to" => $registration_ids->pushRegId
 
