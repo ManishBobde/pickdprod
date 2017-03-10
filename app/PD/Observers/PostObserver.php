@@ -28,10 +28,10 @@ class PostObserver {
 	public function saved(PublishedPost $publishedPost)
 	{
 		$publishedPosts = DB::connection('pickdmysql')->table('posts')->insert([
-				'postTitle'     => $publishedPost->title, 'shortDescription' => $publishedPost->body,
-				'sourceName'    => $publishedPost->sourceTitle, 'sourceUrl' => $publishedPost->sourceUrl,
+				'title'     => $publishedPost->title, 'body' => $publishedPost->body,
+				'sourceTitle'    => $publishedPost->sourceTitle, 'sourceUrl' => $publishedPost->sourceUrl,
 				'imageUrl'      => $publishedPost->imageUrl, 'categoryId' => $publishedPost->categoryId,
-				'curatorId'     => $publishedPost->creatorId, 'createdDate' => $publishedPost->createdDate,
+				'creatorId'     => $publishedPost->creatorId, 'createdDate' => $publishedPost->createdDate,
 				'publishedDate' => $publishedPost->publishedDate, 'isVideoPost' =>"0",
 				'needsPushNotification' => $publishedPost->needsPushNotification,'created_at' =>Carbon::now(),
 				'updated_at' =>Carbon::now()
